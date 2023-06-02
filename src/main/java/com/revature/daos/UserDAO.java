@@ -39,6 +39,27 @@ public class UserDAO implements UserDAOInterface{
 
     @Override
     public ArrayList<User> getAllUsers() {
+
+        try(Connection conn = ConnectionUtil.getConnection()){
+            ArrayList<User> users = new ArrayList<>();
+
+            String sql = "SELECT * FROM users";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            if(rs.next()) {
+                User user = new User(
+                        rs.getInt("user_id"),
+                        rs.getString("first_name"),
+                        rs.getString("last_name")
+                );
+                users.add(user);
+            }
+            return users;
+        } catch(SQLException e) {
+            System.out.println("Error getting all users!");
+            e.printStackTrace();
+        }
         return null;
     }
 

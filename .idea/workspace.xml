@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f5e525e-edcb-42d1-8846-6753611ad655" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/Launcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/daos/TaskDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/daos/TaskDAOInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/daos/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/daos/UserDAOInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/models/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/utils/ConnectionUtil.java" afterDir="false" />
+    <list default="true" id="8f5e525e-edcb-42d1-8846-6753611ad655" name="Changes" comment="UserDAO">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/daos/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/daos/UserDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +59,74 @@
       <option name="presentableId" value="Default" />
       <updated>1685745593215</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1685748798229</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685748798229</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ConnectionUtil">
+      <created>1685748835349</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685748835349</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Task Class">
+      <created>1685748871222</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685748871222</updated>
+    </task>
+    <task id="LOCAL-00004" summary="User Class">
+      <created>1685748885834</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685748885834</updated>
+    </task>
+    <task id="LOCAL-00005" summary="TaskDAOInterface">
+      <created>1685748907340</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685748907340</updated>
+    </task>
+    <task id="LOCAL-00006" summary="UserDAOInterface">
+      <created>1685748921251</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685748921251</updated>
+    </task>
+    <task id="LOCAL-00007" summary="TaskDAO">
+      <created>1685748940408</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685748940408</updated>
+    </task>
+    <task id="LOCAL-00008" summary="UserDAO">
+      <created>1685748952038</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1685748952038</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="ConnectionUtil" />
+    <MESSAGE value="Task Class" />
+    <MESSAGE value="User Class" />
+    <MESSAGE value="TaskDAOInterface" />
+    <MESSAGE value="UserDAOInterface" />
+    <MESSAGE value="TaskDAO" />
+    <MESSAGE value="UserDAO" />
+    <option name="LAST_COMMIT_MESSAGE" value="UserDAO" />
   </component>
 </project>
