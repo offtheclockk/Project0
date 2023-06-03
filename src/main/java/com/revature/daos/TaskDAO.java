@@ -102,6 +102,18 @@ public class TaskDAO implements TaskDAOInterface{
 
     @Override
     public boolean updateTaskIsCompleted(boolean is_completed, int id) {
+        try(Connection conn = ConnectionUtil.getConnection()) {
+            String sql = "UPDATE tasks SET is_completed = ? WHERE task_id = ?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setBoolean(1, is_completed);
+            ps.setInt(2, id);
+            ps.executeUpdate();
+            return true;
+
+        } catch(SQLException e) {
+            System.out.println("Update task completion failed!!");
+            e.printStackTrace();
+        }
         return false;
     }
 
