@@ -31,7 +31,7 @@ public class UserDAO implements UserDAOInterface{
                 return user;
             }
         } catch(SQLException e) {
-            System.out.println("Error getting Role");
+            System.out.println("Error getting User");
             e.printStackTrace();
         }
         return null;
@@ -91,7 +91,7 @@ public class UserDAO implements UserDAOInterface{
             return true;
 
         } catch(SQLException e) {
-            System.out.println("Update first name failed!!");
+            System.out.println("Update last name failed!!");
             e.printStackTrace();
         }
         return false;
