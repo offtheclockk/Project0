@@ -29,7 +29,7 @@ public class TaskDAO implements TaskDAOInterface{
                 return task;
             }
         } catch(SQLException e) {
-            System.out.println("Error getting Role");
+            System.out.println("Error getting task!!");
             e.printStackTrace();
         }
         return null;
