@@ -70,6 +70,21 @@ public class UserDAO implements UserDAOInterface{
 
     @Override
     public User insertUser(User user) {
+        try(Connection conn = ConnectionUtil.getConnection()) {
+            String sql = "INSERT INTO users (first_name, last_name) VALUES (?, ?)";
+
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, user.getFirst_name());
+            ps.setString(2, user.getLast_name());
+            ps.executeUpdate();
+
+            return user;
+
+        } catch(SQLException e) {
+            System.out.println("Insert user failed!!");
+            e.printStackTrace();
+        }
+
         return null;
     }
 
