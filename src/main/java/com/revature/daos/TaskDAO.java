@@ -3,15 +3,35 @@ package com.revature.daos;
 import com.revature.models.Task;
 import com.revature.utils.ConnectionUtil;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class TaskDAO implements TaskDAOInterface{
     @Override
     public Task getTaskById(int id) {
+        UserDAO uDAO = new UserDAO();
+        try(Connection conn = ConnectionUtil.getConnection()) {
+            String sql = "SELECT * FROM tasks WHERE task_id = ?";
+
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, id);
+
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()) {
+
+                Task task = new Task(
+                        rs.getInt("task_id"),
+                        rs.getString("task_title"),
+                        rs.getString("task_description"),
+                        rs.getBoolean("is_completed"),
+                        uDAO.getUserById(rs.getInt("user_id"))
+                );
+                return task;
+            }
+        } catch(SQLException e) {
+            System.out.println("Error getting Role");
+            e.printStackTrace();
+        }
         return null;
     }
 
