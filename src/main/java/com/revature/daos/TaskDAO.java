@@ -119,6 +119,23 @@ public class TaskDAO implements TaskDAOInterface{
 
     @Override
     public Task insertTask(Task task) {
+        try(Connection conn = ConnectionUtil.getConnection()) {
+            String sql = "INSERT INTO tasks (task_title, task_description, is_completed, user_id_fk) VALUES (?, ?, ?, ?)";
+
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, task.getTask_title());
+            ps.setString(2, task.getTask_description());
+            ps.setBoolean(3, task.isIs_completed());
+            ps.setInt(4, task.getUser_id_fk());
+            ps.executeUpdate();
+
+            return task;
+
+        } catch(SQLException e) {
+            System.out.println("Insert task failed!!");
+            e.printStackTrace();
+        }
+
         return null;
     }
 
