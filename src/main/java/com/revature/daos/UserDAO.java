@@ -64,7 +64,36 @@ public class UserDAO implements UserDAOInterface{
     }
 
     @Override
-    public boolean updateUser() {
+    public boolean updateUserFirstName(String first_name, int id) {
+        try(Connection conn = ConnectionUtil.getConnection()) {
+            String sql = "UPDATE users SET first_name = ? WHERE user_id = ?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, first_name);
+            ps.setInt(2, id);
+            ps.executeUpdate();
+            return true;
+
+        } catch(SQLException e) {
+            System.out.println("Update first name failed!!");
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    @Override
+    public boolean updateUserLastName(String last_name, int id) {
+        try(Connection conn = ConnectionUtil.getConnection()) {
+            String sql = "UPDATE users SET last_name = ? WHERE user_id = ?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, last_name);
+            ps.setInt(2, id);
+            ps.executeUpdate();
+            return true;
+
+        } catch(SQLException e) {
+            System.out.println("Update first name failed!!");
+            e.printStackTrace();
+        }
         return false;
     }
 

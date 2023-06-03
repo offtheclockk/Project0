@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f5e525e-edcb-42d1-8846-6753611ad655" name="Changes" comment="UserDAO">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Launcher.java" afterDir="false" />
+    <list default="true" id="8f5e525e-edcb-42d1-8846-6753611ad655" name="Changes" comment="deleteUser()">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/daos/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/daos/UserDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +113,28 @@
       <option name="project" value="LOCAL" />
       <updated>1685748952038</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="getAllUsers()">
+      <created>1685750349882</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1685750349882</updated>
+    </task>
+    <task id="LOCAL-00010" summary="insertUser()">
+      <created>1685750504661</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685750504661</updated>
+    </task>
+    <task id="LOCAL-00011" summary="deleteUser()">
+      <created>1685750578617</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1685750578617</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -127,6 +146,9 @@
     <MESSAGE value="UserDAOInterface" />
     <MESSAGE value="TaskDAO" />
     <MESSAGE value="UserDAO" />
-    <option name="LAST_COMMIT_MESSAGE" value="UserDAO" />
+    <MESSAGE value="getAllUsers()" />
+    <MESSAGE value="insertUser()" />
+    <MESSAGE value="deleteUser()" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleteUser()" />
   </component>
 </project>

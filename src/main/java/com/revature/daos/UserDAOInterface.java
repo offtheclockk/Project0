@@ -7,7 +7,10 @@ import java.util.ArrayList;
 public interface UserDAOInterface {
     User getUserById(int id);
     ArrayList<User> getAllUsers();
-    boolean updateUser();
+    boolean updateUserFirstName(String first_name, int id);
+
+    boolean updateUserLastName(String last_name, int id);
+
     User insertUser(User user);
     User deleteUser(int id);
 
