@@ -141,6 +141,17 @@ public class TaskDAO implements TaskDAOInterface{
 
     @Override
     public Task deleteTask(int id) {
+        try(Connection conn = ConnectionUtil.getConnection()) {
+            String sql = "DELETE FROM tasks WHERE task_id = ?";
+
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.executeUpdate();
+
+        } catch(SQLException e) {
+            System.out.println("Delete task failed!!");
+            e.printStackTrace();
+        }
         return null;
     }
 }
