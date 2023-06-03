@@ -1,7 +1,12 @@
 package com.revature.daos;
 
 import com.revature.models.Task;
+import com.revature.utils.ConnectionUtil;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 public class TaskDAO implements TaskDAOInterface{
@@ -12,7 +17,43 @@ public class TaskDAO implements TaskDAOInterface{
 
     @Override
     public ArrayList<Task> getAllTasks() {
+        UserDAO uDAO = new UserDAO();
+
+        try(Connection conn = ConnectionUtil.getConnection()) {
+            ArrayList<Task> tasks = new ArrayList<>();
+
+            String sql = "SELECT * FROM tasks";
+
+            Statement s = conn.createStatement();
+            ResultSet rs = s.executeQuery(sql);
+
+            if (rs.next()) {
+                Task task = new Task(
+                        rs.getInt("task_id"),
+                        rs.getString("task_title"),
+                        rs.getString("task_description"),
+                        rs.getBoolean("is_completed"),
+                        uDAO.getUserById(rs.getInt("task_id_fk"))
+                );
+                tasks.add(task);
+            }
+            return tasks;
+
+        } catch(SQLException e) {
+            System.out.println("Getting all tasks failed!!");
+            e.printStackTrace();
+        }
         return null;
+    }
+
+    @Override
+    public boolean updateTaskTitle(String task_title, int id) {
+        return false;
+    }
+
+    @Override
+    public boolean updateTaskDescription(String task_description, int id) {
+        return false;
     }
 
     @Override
