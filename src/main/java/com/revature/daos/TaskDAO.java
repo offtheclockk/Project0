@@ -53,7 +53,7 @@ public class TaskDAO implements TaskDAOInterface{
                         rs.getString("task_title"),
                         rs.getString("task_description"),
                         rs.getBoolean("is_completed"),
-                        uDAO.getUserById(rs.getInt("task_id_fk"))
+                        uDAO.getUserById(rs.getInt("user_id_fk"))
                 );
                 tasks.add(task);
             }
