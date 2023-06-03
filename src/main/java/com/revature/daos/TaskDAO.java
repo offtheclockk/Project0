@@ -68,11 +68,35 @@ public class TaskDAO implements TaskDAOInterface{
 
     @Override
     public boolean updateTaskTitle(String task_title, int id) {
+        try(Connection conn = ConnectionUtil.getConnection()) {
+            String sql = "UPDATE tasks SET task_title = ? WHERE task_id = ?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, task_title);
+            ps.setInt(2, id);
+            ps.executeUpdate();
+            return true;
+
+        } catch(SQLException e) {
+            System.out.println("Update task title failed!!");
+            e.printStackTrace();
+        }
         return false;
     }
 
     @Override
     public boolean updateTaskDescription(String task_description, int id) {
+        try(Connection conn = ConnectionUtil.getConnection()) {
+            String sql = "UPDATE tasks SET task_description = ? WHERE task_id = ?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, task_description);
+            ps.setInt(2, id);
+            ps.executeUpdate();
+            return true;
+
+        } catch(SQLException e) {
+            System.out.println("Update task description failed!!");
+            e.printStackTrace();
+        }
         return false;
     }
 
