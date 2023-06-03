@@ -146,7 +146,28 @@
       <option name="project" value="LOCAL" />
       <updated>1685751060308</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="getAllTasks()">
+      <created>1685751471550</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1685751471550</updated>
+    </task>
+    <task id="LOCAL-00015" summary="getTaskById()">
+      <created>1685751879866</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685751879866</updated>
+    </task>
+    <task id="LOCAL-00016" summary="typos">
+      <created>1685751958232</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1685751958232</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -162,6 +183,8 @@
     <MESSAGE value="insertUser()" />
     <MESSAGE value="deleteUser()" />
     <MESSAGE value="added updateUserLastName()" />
+    <MESSAGE value="getAllTasks()" />
+    <MESSAGE value="getTaskById()" />
     <MESSAGE value="typos" />
     <option name="LAST_COMMIT_MESSAGE" value="typos" />
   </component>
