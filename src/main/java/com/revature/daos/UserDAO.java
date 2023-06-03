@@ -90,6 +90,17 @@ public class UserDAO implements UserDAOInterface{
 
     @Override
     public User deleteUser(int id) {
+        try(Connection conn = ConnectionUtil.getConnection()) {
+            String sql = "DELETE FROM users WHERE user_id = ?";
+
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.executeUpdate();
+
+        } catch(SQLException e) {
+            System.out.println("Delete user failed!!");
+            e.printStackTrace();
+        }
         return null;
     }
 }
