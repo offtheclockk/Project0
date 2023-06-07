@@ -47,7 +47,7 @@ public class UserDAO implements UserDAOInterface{
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
 
-            if(rs.next()) {
+            while(rs.next()) {
                 User user = new User(
                         rs.getInt("user_id"),
                         rs.getString("first_name"),
@@ -118,18 +118,19 @@ public class UserDAO implements UserDAOInterface{
     }
 
     @Override
-    public User deleteUser(int id) {
+    public boolean deleteUser(int id) {
         try(Connection conn = ConnectionUtil.getConnection()) {
             String sql = "DELETE FROM users WHERE user_id = ?";
 
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setInt(1, id);
             ps.executeUpdate();
+            return true;
 
         } catch(SQLException e) {
             System.out.println("Delete user failed!!");
             e.printStackTrace();
         }
-        return null;
+        return false;
     }
 }

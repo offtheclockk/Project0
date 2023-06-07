@@ -12,6 +12,6 @@ public interface UserDAOInterface {
     boolean updateUserLastName(String last_name, int id);
 
     User insertUser(User user);
-    User deleteUser(int id);
+    boolean deleteUser(int id);
 
 }
