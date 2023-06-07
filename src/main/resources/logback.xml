@@ -22,6 +22,9 @@
         </encoder>
         <file>log.txt</file>
         <append>true</append>
+<!--        <filter class="LevelFilter">-->
+<!--            <level>WARN</level>-->
+<!--        </filter>-->
     </appender>
 
     <root level="info">

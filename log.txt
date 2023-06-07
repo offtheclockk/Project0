@@ -16,3 +16,23 @@
 09:17:16.594 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:7070/
 09:17:16.603 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
 09:17:16.604 [main] INFO  io.javalin.Javalin -- Javalin started in 452ms \o/
+13:38:35.935 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+13:38:36.063 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.16.1+1-LTS
+13:38:36.157 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+13:38:36.173 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5ddea849{/,null,AVAILABLE}
+13:38:36.391 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@60129b9a{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+13:38:36.405 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@38234a38{STARTING}[11.0.15,sto=0] @1116ms
+13:38:36.405 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+13:38:36.412 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:7070/
+13:38:36.421 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+13:38:36.423 [main] INFO  io.javalin.Javalin -- Javalin started in 490ms \o/
+13:39:02.596 [JettyServerThreadPool-39] INFO  com.revature.utils.JavalinAppConfig -- GET request has called to path: http://localhost:7070/users
+13:39:59.390 [JettyServerThreadPool-25] INFO  com.revature.utils.JavalinAppConfig -- DELETE request has called to path: http://localhost:7070/users/1
