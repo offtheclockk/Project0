@@ -1,0 +1,18 @@
+09:17:16.156 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+09:17:16.269 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.16.1+1-LTS
+09:17:16.357 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+09:17:16.372 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@3569fc08{/,null,AVAILABLE}
+09:17:16.572 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@106cc338{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+09:17:16.586 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@58326051{STARTING}[11.0.15,sto=0] @1037ms
+09:17:16.587 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+09:17:16.594 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:7070/
+09:17:16.603 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+09:17:16.604 [main] INFO  io.javalin.Javalin -- Javalin started in 452ms \o/
