@@ -7,7 +7,11 @@ import com.revature.models.User;
 import java.util.ArrayList;
 
 public class UserService {
-    private final UserDAOInterface userDAO = new UserDAO();
+
+    public UserService(UserDAOInterface userDAO){
+        this.userDAO = userDAO;
+    }
+    private UserDAOInterface userDAO = new UserDAO();
 
     public ArrayList<User> getAllUsers() {
         return userDAO.getAllUsers();

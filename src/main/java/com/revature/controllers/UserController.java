@@ -1,5 +1,6 @@
 package com.revature.controllers;
 
+import com.revature.daos.UserDAO;
 import com.revature.models.User;
 import com.revature.services.UserService;
 import io.javalin.http.Context;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 
 public class UserController {
 
-    private static final UserService userService = new UserService();
+    private static final UserService userService = new UserService(new UserDAO());
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
