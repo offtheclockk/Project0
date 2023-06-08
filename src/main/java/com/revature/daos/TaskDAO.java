@@ -37,7 +37,7 @@ public class TaskDAO implements TaskDAOInterface{
 
     @Override
     public ArrayList<Task> getAllTasks() {
-        TaskDAO tDAO = new TaskDAO();
+        UserDAO uDAO = new UserDAO();
 
         try(Connection conn = ConnectionUtil.getConnection()) {
             ArrayList<Task> tasks = new ArrayList<>();
@@ -53,7 +53,7 @@ public class TaskDAO implements TaskDAOInterface{
                         rs.getString("task_title"),
                         rs.getString("task_description"),
                         rs.getBoolean("is_completed"),
-                        tDAO.getTaskById(rs.getInt("user_id_fk")).getUser()
+                        uDAO.getUserById(rs.getInt("user_id_fk"))
                 );
                 tasks.add(task);
             }

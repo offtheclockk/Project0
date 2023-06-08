@@ -39,8 +39,13 @@ public class TaskController {
     public static void handleGetAll(Context ctx){
         ArrayList<Task> tasks = taskService.getAllTasks();
 
-        ctx.status(200);
-        ctx.json(tasks);
+        if (tasks != null) {
+            ctx.status(200);
+            ctx.json(tasks);
+        } else {
+            ctx.status(400);
+            logger.warn("Get all tasks failed!");
+        }
     }
 
     public static void handleInsert(Context ctx){

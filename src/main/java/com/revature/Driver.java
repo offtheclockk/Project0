@@ -1,7 +1,6 @@
 package com.revature;
 
 import com.revature.utils.JavalinAppConfig;
-import io.javalin.Javalin;
 
 public class Driver {
 
