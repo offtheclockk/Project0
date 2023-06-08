@@ -14,5 +14,5 @@ public interface TaskDAOInterface {
 
     boolean updateTaskIsCompleted(boolean is_completed, int id);
     Task insertTask(Task task);
-    Task deleteTask(int id);
+    boolean deleteTask(int id);
 }

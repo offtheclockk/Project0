@@ -37,7 +37,7 @@ public class TaskDAO implements TaskDAOInterface{
 
     @Override
     public ArrayList<Task> getAllTasks() {
-        UserDAO uDAO = new UserDAO();
+        TaskDAO tDAO = new TaskDAO();
 
         try(Connection conn = ConnectionUtil.getConnection()) {
             ArrayList<Task> tasks = new ArrayList<>();
@@ -47,13 +47,13 @@ public class TaskDAO implements TaskDAOInterface{
             Statement s = conn.createStatement();
             ResultSet rs = s.executeQuery(sql);
 
-            if (rs.next()) {
+            while (rs.next()) {
                 Task task = new Task(
                         rs.getInt("task_id"),
                         rs.getString("task_title"),
                         rs.getString("task_description"),
                         rs.getBoolean("is_completed"),
-                        uDAO.getUserById(rs.getInt("user_id_fk"))
+                        tDAO.getTaskById(rs.getInt("user_id_fk")).getUser()
                 );
                 tasks.add(task);
             }
@@ -140,18 +140,19 @@ public class TaskDAO implements TaskDAOInterface{
     }
 
     @Override
-    public Task deleteTask(int id) {
+    public boolean deleteTask(int id) {
         try(Connection conn = ConnectionUtil.getConnection()) {
             String sql = "DELETE FROM tasks WHERE task_id = ?";
 
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setInt(1, id);
             ps.executeUpdate();
+            return true;
 
         } catch(SQLException e) {
             System.out.println("Delete task failed!!");
             e.printStackTrace();
         }
-        return null;
+        return false;
     }
 }

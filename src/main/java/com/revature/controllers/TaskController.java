@@ -1,12 +1,19 @@
 package com.revature.controllers;
 
+import com.revature.daos.TaskDAO;
 import com.revature.models.Task;
 import com.revature.services.TaskService;
 import io.javalin.http.Context;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+
+import java.util.ArrayList;
 
 public class TaskController {
 
-    private static final TaskService taskService = new TaskService();
+    private static final TaskService taskService = new TaskService(new TaskDAO());
+
+    private static final Logger logger = LoggerFactory.getLogger(TaskController.class);
 
     // Now we have our 5 methods to implement
     // Our roles service gives us the ability to update and get a specific role so we need to implement
@@ -41,23 +48,39 @@ public class TaskController {
     }
 
     public static void handleGetAll(Context ctx){
-        ctx.status(405);
+        ArrayList<Task> tasks = taskService.getAllTasks();
+
+        ctx.status(200);
+        ctx.json(tasks);
     }
 
-    public static void handleCreate(Context ctx){
-        ctx.status(405);
+    public static void handleInsert(Context ctx){
+        Task task = ctx.bodyAsClass(Task.class);
+        Task returnedTask = taskService.insertTask(task);
+
+        if (returnedTask != null) {
+            ctx.status(201);
+            ctx.json(returnedTask);
+        } else {
+            ctx.status(400);
+            logger.warn("Insert failed!");
+        }
     }
 
     public static void handleUpdate(Context ctx){
-        // We'll start here for simplicity
-        // We expect a role title and a role salary to come in from the client
-
-        // We need to deserialize that and create a Role object
+        int id = Integer.parseInt(ctx.pathParam("id"));
         Task submittedTask = ctx.bodyAsClass(Task.class);
 
         // Call the roleService to actually do something with this info
-        boolean updateSuccessful = taskService.updateTaskTitle(submittedTask.getTask_title(), submittedTask.getTask_id());
+        boolean updateSuccessful;
 
+        if (submittedTask.getTask_title() != null) {
+            updateSuccessful = taskService.updateTaskTitle(submittedTask.getTask_title(), id);
+        } else if (submittedTask.getTask_description() != null){
+            updateSuccessful = taskService.updateTaskDescription(submittedTask.getTask_description(), id);
+        } else {
+            updateSuccessful = taskService.updateTaskIsCompleted(submittedTask.isIs_completed(), id);
+        }
         // So updateSuccessful should let us know if we successfully updated the DB
         if (updateSuccessful){
             // This is good
@@ -65,10 +88,19 @@ public class TaskController {
         } else{
             // Was not able to update DB for some reason
             ctx.status(400);
+            logger.warn("Update failed!");
         }
     }
 
     public static void handleDelete(Context ctx){
-        ctx.status(405); // Method is not allowed
+        int id = Integer.parseInt(ctx.pathParam("id"));
+        boolean deleteSuccessful = taskService.deleteTask(id);
+
+        if (deleteSuccessful) {
+            ctx.status(200);
+        } else {
+            ctx.status(400);
+            logger.warn("Delete failed!");
+        }
     }
 }
