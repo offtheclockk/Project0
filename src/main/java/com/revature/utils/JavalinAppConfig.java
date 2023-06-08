@@ -61,12 +61,12 @@ public class JavalinAppConfig {
                 path("tasks", () ->{
                     // Declare my routes and methods super quickly
                     get(TaskController::handleGetAll);
-                    post(TaskController::handleCreate);
-                    put(TaskController::handleUpdate);
-                    delete(TaskController::handleDelete);
+                    post(TaskController::handleInsert);
                     // What about /roles/{id}?????
                     path("{id}", () ->{
                         get(TaskController::handleGetOne);
+                        put(TaskController::handleUpdate);
+                        delete(TaskController::handleDelete);
                     });
                 });
             });
