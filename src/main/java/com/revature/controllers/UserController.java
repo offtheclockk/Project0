@@ -16,7 +16,6 @@ public class UserController {
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     public static void handleGetAll(Context ctx){
-        // Inside here we need to make a call to our Employee Service to get us all the employees listed
         ArrayList<User> users = userService.getAllUsers();
 
         ctx.status(200);
@@ -24,28 +23,19 @@ public class UserController {
     }
 
     public static void handleInsert(Context ctx){
-        // To create a new employee from our Context body we need to essentially take it in as a JSON and convert it
-        // To an object of the appropriate class
-
         User user = ctx.bodyAsClass(User.class);
 
         User returnedUser = userService.insertUser(user);
 
-        // If the employee object we receive from the service is null, something has gone wrong
-        // If it is not null, yay we did it
-
         if (returnedUser != null){
-            // This means the user was created
             ctx.status(201);
             ctx.json(returnedUser);
         } else{
-            // What happens if it comes back null?
             ctx.status(400);
             logger.warn("Insert failed");
         }
     }
 
-    // Create some method stubs here just for now
     public static void handleGetOne(Context ctx){
         int id;
         try{
@@ -56,11 +46,8 @@ public class UserController {
             return;
         }
 
-        // Now we can call the service to get this checked out
         User user = userService.getUserById(id);
 
-        // Now we need to make sure our role is not null, if it isn't, we can return the role and call it a day,
-        // otherwise we're returning a 404 since that role can't be found
         if (user != null){
             ctx.status(200);
             ctx.json(user);

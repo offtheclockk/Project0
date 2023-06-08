@@ -16,12 +16,6 @@ import static io.javalin.apibuilder.ApiBuilder.*;
 
 public class JavalinAppConfig {
 
-    // This is the class I plan to use to do ALL my Javalin configuration
-
-    // I plan to create a PRIVATE javalin app that will hold my config information and I will start it in the driver
-    // class main method
-
-    // Before we do our configuration we need to create a GSON object mapper
     Gson gson = new GsonBuilder().create();
 
     JsonMapper gsonMapper = new JsonMapper() {
@@ -44,14 +38,10 @@ public class JavalinAppConfig {
                 logger.info(ctx.method() + " request has called to path: " + ctx.fullUrl());
             })
 
-            // routes will declare all our possible paths
             .routes(() ->{
-                // each path will allow to group like method
                 path("users", () ->{
-                    // Declare my routes and methods super quickly
                     get(UserController::handleGetAll);
                     post(UserController::handleInsert);
-                    // What about /employees/{id}?????
                     path("{id}", () ->{
                         get(UserController::handleGetOne);
                         put(UserController::handleUpdateName);
@@ -59,10 +49,8 @@ public class JavalinAppConfig {
                     });
                 });
                 path("tasks", () ->{
-                    // Declare my routes and methods super quickly
                     get(TaskController::handleGetAll);
                     post(TaskController::handleInsert);
-                    // What about /roles/{id}?????
                     path("{id}", () ->{
                         get(TaskController::handleGetOne);
                         put(TaskController::handleUpdate);
@@ -70,9 +58,6 @@ public class JavalinAppConfig {
                     });
                 });
             });
-
-    // To make it so the main method of the Driver class is what STARTS the application, we'll create a method that
-    // allows to start the javalin app we've configured here
 
     public void start(int port){
         app.start(port);

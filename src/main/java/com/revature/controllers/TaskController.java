@@ -15,31 +15,19 @@ public class TaskController {
 
     private static final Logger logger = LoggerFactory.getLogger(TaskController.class);
 
-    // Now we have our 5 methods to implement
-    // Our roles service gives us the ability to update and get a specific role so we need to implement
-    // handleGetOne and handleUpdate
     public static void handleGetOne(Context ctx){
-        // Recall that the path for this will be http://localhost:7070/tasks/{id}
-        // This will match http://localhost:7070/tasks/1
-        // But it will also match http://localhost:7070/tasks/NaN
 
-        //int x = ctx.pathParam("id"); // We need to find a way to parse this
         int id;
         try{
             id = Integer.parseInt(ctx.pathParam("id"));
         }catch (NumberFormatException e){
-            // This block running means they didn't have a valid integer in their path
             ctx.status(400);
-            // Adding a return statement here because there's no point continuing with a bad int
             return;
         }
 
-        // Let's call the role service and attempt to pull the value
         Task task = taskService.getTaskById(id);
 
-        // We need to check if the role is null or not
         if (task != null){
-            // This is good, it found the roll
             ctx.status(200);
             ctx.json(task);
         } else{
@@ -72,7 +60,6 @@ public class TaskController {
         int id = Integer.parseInt(ctx.pathParam("id"));
         Task submittedTask = ctx.bodyAsClass(Task.class);
 
-        // Call the roleService to actually do something with this info
         boolean updateSuccessful;
 
         if (submittedTask.getTask_title() != null) {
@@ -82,12 +69,9 @@ public class TaskController {
         } else {
             updateSuccessful = taskService.updateTaskIsCompleted(submittedTask.isIs_completed(), id);
         }
-        // So updateSuccessful should let us know if we successfully updated the DB
         if (updateSuccessful){
-            // This is good
             ctx.status(200);
         } else{
-            // Was not able to update DB for some reason
             ctx.status(400);
             logger.warn("Update failed!");
         }
