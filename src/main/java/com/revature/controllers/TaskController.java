@@ -44,6 +44,7 @@ public class TaskController {
             ctx.json(task);
         } else{
             ctx.status(404);
+            logger.warn("Get user by id failed!!");
         }
     }
 

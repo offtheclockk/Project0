@@ -87,6 +87,7 @@ public class UserController {
             ctx.status(200);
         } else {
             ctx.status(400);
+            logger.warn("Update failed!");
         }
     }
 
@@ -98,6 +99,7 @@ public class UserController {
             ctx.status(200);
         } else {
             ctx.status(400);
+            logger.warn("Delete failed!");
         }
     }
 
