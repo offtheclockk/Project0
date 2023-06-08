@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f5e525e-edcb-42d1-8846-6753611ad655" name="Changes" comment="dependencies">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/controllers/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/controllers/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/daos/TaskDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/daos/TaskDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/daos/TaskDAOInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/daos/TaskDAOInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/services/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/services/TaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/utils/JavalinAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/utils/JavalinAppConfig.java" afterDir="false" />
+    <list default="true" id="8f5e525e-edcb-42d1-8846-6753611ad655" name="Changes" comment="Logs">
+      <change afterPath="$PROJECT_DIR$/src/test/java/TaskServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +51,7 @@
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.TaskServiceTest.getTaskByPositiveInt">
     <configuration name="Launcher" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.revature.deprecated.Launcher" />
       <module name="Project0" />
@@ -71,20 +65,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TaskServiceTest.getTaskByIdNegativeInt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project0" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="TaskServiceTest" />
+      <option name="METHOD_NAME" value="getTaskByIdNegativeInt" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest.getRoleByIdPositiveInt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TaskServiceTest.getTaskByIdZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project0" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
-      <option name="METHOD_NAME" value="getRoleByIdPositiveInt" />
+      <option name="MAIN_CLASS_NAME" value="TaskServiceTest" />
+      <option name="METHOD_NAME" value="getTaskByIdZero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskServiceTest.getTaskByPositiveInt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project0" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TaskServiceTest" />
+      <option name="METHOD_NAME" value="getTaskByPositiveInt" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -112,10 +117,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TaskServiceTest.getTaskByPositiveInt" />
+        <item itemvalue="JUnit.TaskServiceTest.getTaskByIdNegativeInt" />
+        <item itemvalue="JUnit.TaskServiceTest.getTaskByIdZero" />
         <item itemvalue="JUnit.UserServiceTest.updateUserFirstNameNullName" />
         <item itemvalue="JUnit.UserServiceTest.updateUserFirstNameNullTitle" />
-        <item itemvalue="JUnit.UserServiceTest.getRoleByIdPositiveInt" />
-        <item itemvalue="JUnit.UserServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -366,14 +372,32 @@
       <option name="project" value="LOCAL" />
       <updated>1686170490562</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Adjusting routes">
+      <created>1686237340357</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1686237340357</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Implementing task controller routes">
+      <created>1686237389538</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1686237389538</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Logs">
+      <created>1686237419621</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1686237419621</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="UserDAOInterface" />
-    <MESSAGE value="TaskDAO" />
-    <MESSAGE value="UserDAO" />
     <MESSAGE value="getAllUsers()" />
     <MESSAGE value="insertUser()" />
     <MESSAGE value="deleteUser()" />
@@ -396,6 +420,9 @@
     <MESSAGE value="xml" />
     <MESSAGE value="UserService Unit Tests" />
     <MESSAGE value="dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="dependencies" />
+    <MESSAGE value="Adjusting routes" />
+    <MESSAGE value="Implementing task controller routes" />
+    <MESSAGE value="Logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logs" />
   </component>
 </project>

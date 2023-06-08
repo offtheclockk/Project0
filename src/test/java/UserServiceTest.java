@@ -27,11 +27,4 @@ public class UserServiceTest {
         Mockito.when(mockUserDAO.getUserById(4)).thenReturn(user);
         Assertions.assertEquals(user, userService.getUserById(4));
     }
-
-//    @Test
-//    public void updateUserFirstNameNullName(){
-//        String name = null;
-//        Assertions.assertFalse(userService.updateUserFirstName(null, 1));
-//        Mockito.verifyNoInteractions(mockUserDAO);
-//    }
 }
