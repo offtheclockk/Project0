@@ -1234,3 +1234,107 @@ java.lang.NullPointerException: null
 09:04:22.044 [JettyServerThreadPool-39] INFO  com.revature.utils.JavalinAppConfig -- GET request has called to path: http://localhost:7070/tasks
 09:04:39.914 [JettyServerThreadPool-25] INFO  com.revature.utils.JavalinAppConfig -- GET request has called to path: http://localhost:7070/tasks
 09:04:56.892 [JettyServerThreadPool-37] INFO  com.revature.utils.JavalinAppConfig -- GET request has called to path: http://localhost:7070/tasks
+08:10:28.786 [JettyServerThreadPool-52] INFO  com.revature.utils.JavalinAppConfig -- GET request has called to path: http://localhost:7070/tasks
+09:04:56.194 [JettyServerThreadPool-56] INFO  com.revature.utils.JavalinAppConfig -- GET request has called to path: http://localhost:7070/tasks
+09:06:04.485 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+09:06:04.614 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.16.1+1-LTS
+09:06:04.740 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+09:06:04.754 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5ddea849{/,null,AVAILABLE}
+09:06:04.962 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@60129b9a{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+09:06:04.975 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@38234a38{STARTING}[11.0.15,sto=0] @1180ms
+09:06:04.975 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+09:06:04.982 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:7070/
+09:06:04.992 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+09:06:04.994 [main] INFO  io.javalin.Javalin -- Javalin started in 510ms \o/
+09:06:08.119 [JettyServerThreadPool-40] INFO  com.revature.utils.JavalinAppConfig -- GET request has called to path: http://localhost:7070/tasks
+09:06:25.920 [JettyServerThreadPool-25] INFO  com.revature.utils.JavalinAppConfig -- POST request has called to path: http://localhost:7070/tasks
+09:06:31.326 [JettyServerThreadPool-37] INFO  com.revature.utils.JavalinAppConfig -- GET request has called to path: http://localhost:7070/tasks
+09:06:58.903 [JettyServerThreadPool-36] INFO  com.revature.utils.JavalinAppConfig -- POST request has called to path: http://localhost:7070/tasks
+09:06:58.962 [JettyServerThreadPool-36] WARN  c.r.controllers.TaskController -- Insert failed!
+09:07:03.525 [JettyServerThreadPool-37] INFO  com.revature.utils.JavalinAppConfig -- POST request has called to path: http://localhost:7070/tasks
+09:07:09.907 [JettyServerThreadPool-36] INFO  com.revature.utils.JavalinAppConfig -- GET request has called to path: http://localhost:7070/users
+09:07:13.194 [JettyServerThreadPool-37] INFO  com.revature.utils.JavalinAppConfig -- GET request has called to path: http://localhost:7070/tasks
+09:09:14.010 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+09:09:14.153 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.16.1+1-LTS
+09:09:14.267 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+09:09:14.291 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5ddea849{/,null,AVAILABLE}
+09:09:14.526 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@60129b9a{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+09:09:14.545 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@38234a38{STARTING}[11.0.15,sto=0] @1392ms
+09:09:14.546 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+09:09:14.557 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:7070/
+09:09:14.570 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+09:09:14.573 [main] INFO  io.javalin.Javalin -- Javalin started in 565ms \o/
+09:09:16.055 [JettyServerThreadPool-39] INFO  com.revature.utils.JavalinAppConfig -- GET request has called to path: http://localhost:7070/tasks
+09:09:49.422 [JettyServerThreadPool-27] INFO  com.revature.utils.JavalinAppConfig -- POST request has called to path: http://localhost:7070/tasks
+09:09:49.588 [JettyServerThreadPool-27] WARN  c.r.controllers.TaskController -- Insert failed!
+09:10:14.065 [JettyServerThreadPool-36] INFO  com.revature.utils.JavalinAppConfig -- POST request has called to path: http://localhost:7070/tasks
+09:10:20.050 [JettyServerThreadPool-26] INFO  com.revature.utils.JavalinAppConfig -- GET request has called to path: http://localhost:7070/tasks
+11:35:50.131 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+11:35:50.251 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.16.1+1-LTS
+11:35:50.346 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+11:35:50.360 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5ddea849{/,null,AVAILABLE}
+11:35:50.571 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@60129b9a{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+11:35:50.584 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@38234a38{STARTING}[11.0.15,sto=0] @1141ms
+11:35:50.585 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+11:35:50.591 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:7070/
+11:35:50.600 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+11:35:50.602 [main] INFO  io.javalin.Javalin -- Javalin started in 472ms \o/
+11:36:00.444 [JettyServerThreadPool-40] INFO  com.revature.utils.JavalinAppConfig -- POST request has called to path: http://localhost:7070/tasks
+11:36:00.467 [JettyServerThreadPool-40] WARN  c.r.controllers.TaskController -- Insert failed!
+11:36:08.757 [JettyServerThreadPool-25] INFO  com.revature.utils.JavalinAppConfig -- GET request has called to path: http://localhost:7070/tasks
+11:36:08.759 [JettyServerThreadPool-25] WARN  c.r.controllers.TaskController -- Get all tasks failed!
+11:38:26.473 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+11:38:26.587 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.16.1+1-LTS
+11:38:26.612 [main] ERROR io.javalin.Javalin -- Failed to start Javalin
+11:38:26.613 [main] INFO  io.javalin.Javalin -- Stopping Javalin ...
+11:38:26.613 [main] INFO  org.eclipse.jetty.server.Server -- Stopped Server@38234a38{STOPPING}[11.0.15,sto=0]
+11:38:26.613 [main] INFO  io.javalin.Javalin -- Javalin has stopped
+11:40:32.368 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+11:40:32.479 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.16.1+1-LTS
+11:40:32.501 [main] ERROR io.javalin.Javalin -- Failed to start Javalin
+11:40:32.501 [main] INFO  io.javalin.Javalin -- Stopping Javalin ...
+11:40:32.501 [main] INFO  org.eclipse.jetty.server.Server -- Stopped Server@38234a38{STOPPING}[11.0.15,sto=0]
+11:40:32.501 [main] INFO  io.javalin.Javalin -- Javalin has stopped
+11:40:44.970 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+11:40:45.095 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.16.1+1-LTS
+11:40:45.189 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+11:40:45.204 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5ddea849{/,null,AVAILABLE}
+11:40:45.401 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@60129b9a{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+11:40:45.415 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@38234a38{STARTING}[11.0.15,sto=0] @1076ms
+11:40:45.416 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+11:40:45.423 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:7070/
+11:40:45.432 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+11:40:45.434 [main] INFO  io.javalin.Javalin -- Javalin started in 465ms \o/
+11:40:48.656 [JettyServerThreadPool-39] INFO  com.revature.utils.JavalinAppConfig -- GET request has called to path: http://localhost:7070/tasks

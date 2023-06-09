@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f5e525e-edcb-42d1-8846-6753611ad655" name="Changes" comment="Removing comments">
+    <list default="true" id="8f5e525e-edcb-42d1-8846-6753611ad655" name="Changes" comment="Debugging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/controllers/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/controllers/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/utils/JavalinAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/utils/JavalinAppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/deprecated/Launcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/utils/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/utils/ConnectionUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +54,31 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Driver">
+    <configuration name="Driver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="PASSWORD" value="password" />
+        <env name="URL" value="jdbc:postgresql://localhost:5432/postgres?currentSchema=project0" />
+        <env name="USERNAME" value="postgres" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.revature.Driver" />
+      <module name="Project0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.revature.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Launcher" type="Application" factoryName="Application" nameIsGenerated="true">
+      <envs>
+        <env name="URL" value="jdbc:postgresql://localhost:5432/postgres?currentSchema=project0&quot;, USERNAME=&quot;postgres&quot;" />
+        <env name="PASSWORD" value="password" />
+        <env name="USERNAME" value="postgres" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="com.revature.deprecated.Launcher" />
       <module name="Project0" />
       <extension name="coverage">
@@ -109,23 +131,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest.updateUserFirstNameNullTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project0" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
-      <option name="METHOD_NAME" value="updateUserFirstNameNullTitle" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="Application.Launcher" />
+      <item itemvalue="Application.Driver" />
+      <item itemvalue="JUnit.TaskServiceTest.getTaskByIdNegativeInt" />
+      <item itemvalue="JUnit.TaskServiceTest.getTaskByIdZero" />
+      <item itemvalue="JUnit.TaskServiceTest.getTaskByPositiveInt" />
+      <item itemvalue="JUnit.UserServiceTest.updateUserFirstNameNullName" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Driver" />
         <item itemvalue="JUnit.TaskServiceTest.getTaskByPositiveInt" />
         <item itemvalue="JUnit.TaskServiceTest.getTaskByIdNegativeInt" />
         <item itemvalue="JUnit.TaskServiceTest.getTaskByIdZero" />
         <item itemvalue="JUnit.UserServiceTest.updateUserFirstNameNullName" />
-        <item itemvalue="JUnit.UserServiceTest.updateUserFirstNameNullTitle" />
       </list>
     </recent_temporary>
   </component>
@@ -404,12 +424,18 @@
       <option name="project" value="LOCAL" />
       <updated>1686237878641</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Debugging">
+      <created>1686240313081</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1686240313081</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="insertUser()" />
     <MESSAGE value="deleteUser()" />
     <MESSAGE value="added updateUserLastName()" />
     <MESSAGE value="getAllTasks()" />
@@ -434,7 +460,8 @@
     <MESSAGE value="Implementing task controller routes" />
     <MESSAGE value="Logs" />
     <MESSAGE value="Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests" />
+    <MESSAGE value="Debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debugging" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
